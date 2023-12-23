@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dijital Saat</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"> <!-- Share Tech Mono fontunu ekleyin -->
+    <link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1073322186103857252/1188228736290652230/Adsz_tasarm_1.png?ex=6599c33e&is=65874e3e&hm=1315206e527d7751cfee74cb&=&format=webp&quality=lossless&width=750&height=750">
+
+    <style>
+        body {
+            background: url('https://media.discordapp.net/attachments/1117547459355361301/1188231301426315414/Leonardo_Diffusion_XL_PromptCreate_a_captivating_nighttime_lan_1.jpg?ex=6599c5a2&is=658750a2&hm=fca2fe7a3286fc5730416f0d00d59f914869a16b1af354e9ca849d685638aabc&=&format=webp&width=1072&height=804') no-repeat center center fixed; /* Arka plan resmi ekleme, 'your-image-url' kısmını kendi resminizin URL'si ile değiştirin */
+            background-size: cover; /* Arka plan resminin boyutunu kapsamak için */
+            color: #7F7FFF; /* Neon renk uyumu */
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0; /* Sayfa kenar boşluklarını kaldırın */
+            height: 100vh; /* Sayfanın yüksekliğini ekran yüksekliğine ayarlayın */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #container {
+            background-color: rgba(0, 0, 0, 0.5); /* Kare arka plan rengi ve opaklık */
+            border-radius: 20px; /* Köşeleri yuvarla */
+            padding: 20px; /* Kare iç boşluğu */
+            max-width: 80%; /* Kare maksimum genişlik */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Kare gölge */
+        }
+
+        #clock {
+            font-size: 5em; /* Saat font büyüklüğü */
+            letter-spacing: 2px;
+            text-shadow: 0 0 40px #7F7FFF; /* Neon efekti için mor gölge artırıldı */
+            margin-bottom: 20px;
+            font-family: 'Share Tech Mono', monospace; /* Saat yazı fontunu Share Tech Mono ile değiştir */
+        }
+
+        #date {
+            font-size: 0.8em; /* Tarih font küçüklüğü */
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px #7F7FFF; /* Neon efekti için mor gölge */
+        }
+
+        #designedBy {
+            font-size: 0.7em; /* Designed by Emin font küçüklüğü */
+            letter-spacing: 1px;
+            text-shadow: 0 0 5px #7F7FFF; /* Neon efekti için mor gölge */
+            cursor: pointer; /* Tıklanabilir bir imleç ekleyin */
+            text-decoration: underline; /* Alt çizgi ekleyin */
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="clock"></div>
+        <div id="date"></div>
+        <div id="designedBy" onclick="window.location.href='https://eminxyp.com.tr'">Designed by Emin</div>
+    </div>
+
+    <script>
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            var timeString = hours + ":" + minutes + ":" + seconds;
+
+            document.getElementById("clock").innerHTML = timeString;
+
+            var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            var dateString = now.toLocaleDateString('tr-TR', options);
+
+            document.getElementById("date").innerHTML = dateString;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock(); // Sayfa yüklendiğinde saat bilgisini hemen göstermek için
+    </script>
+</body>
+</html>
