@@ -58,7 +58,7 @@
     <div id="container">
         <div id="clock"></div>
         <div id="date"></div>
-        <div id="designedBy" onclick="window.open('https://eminxyp.com.tr', '_blank')">Designed by Emin</div>
+        <div id="designedBy" onclick="redirectTo('redirect.html')">Designed by Emin</div>
     </div>
 
     <script>
@@ -82,8 +82,13 @@
             document.getElementById("date").innerHTML = dateString;
         }
 
+        function redirectTo(url) {
+            window.open(url, '_blank');
+        }
+
         setInterval(updateClock, 1000);
         updateClock(); // Sayfa yüklendiğinde saat bilgisini hemen göstermek için
     </script>
 </body>
 </html>
+
