@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dijital Saat</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"> <!-- Caveat fontunu ekleyin -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"> <!-- Share Tech Mono fontunu ekleyin -->
     <style>
         body {
             background-color: black;
-            color: white; /* Beyaz renk */
+            color: #8E44AD; /* Neon renk uyumu */
             font-family: 'Arial', sans-serif;
             text-align: center;
             margin-top: 20vh;
@@ -18,10 +18,10 @@
         #clock {
             font-size: 5em; /* Saat font büyüklüğü */
             letter-spacing: 2px;
-            text-shadow: 0 0 30px #8E44AD; /* Neon efekti için mor gölge artırıldı */
-            margin-top: 50px; /* Saati aşağı kaydır */
+            text-shadow: 0 0 40px #8E44AD; /* Neon efekti için mor gölge artırıldı */
+            margin-top: 30px; /* Saati aşağı kaydır */
             margin-bottom: 20px;
-            font-family: 'Caveat', cursive; /* Saat yazı fontunu Caveat ile değiştir */
+            font-family: 'Share Tech Mono', monospace; /* Saat yazı fontunu Share Tech Mono ile değiştir */
         }
 
         #date {
@@ -30,13 +30,25 @@
             position: absolute;
             bottom: 10px;
             right: 10px; /* Köşeye yerleştir */
+            text-shadow: 0 0 10px #8E44AD; /* Neon efekti için mor gölge */
+        }
+
+        #designedBy {
+            font-size: 0.7em; /* Designed by Emin font küçüklüğü */
+            letter-spacing: 1px;
+            position: absolute;
+            bottom: 5px;
+            left: 10px; /* Sol alt köşeye yerleştir */
             text-shadow: 0 0 5px #8E44AD; /* Neon efekti için mor gölge */
+            cursor: pointer; /* Tıklanabilir bir imleç ekleyin */
+            text-decoration: underline; /* Alt çizgi ekleyin */
         }
     </style>
 </head>
 <body>
     <div id="clock"></div>
     <div id="date"></div>
+    <div id="designedBy" onclick="window.location.href='https://eminxyp.com.tr'">Designed by Emin</div>
 
     <script>
         function updateClock() {
