@@ -9,7 +9,7 @@
         body {
             background-color: black;
             color: white; /* Beyaz renk */
-            font-family: 'Arial', sans-serif;
+            font-family: 'Orbitron', sans-serif; /* Yazı fontunu değiştir */
             text-align: center;
             margin-top: 20vh;
         }
@@ -17,17 +17,17 @@
         #clock {
             font-size: 4em; /* Saat font büyüklüğü */
             letter-spacing: 2px;
-            text-shadow: 0 0 10px #8E44AD; /* Neon efekti için gölge */
+            text-shadow: 0 0 10px #8E44AD; /* Neon efekti için mor gölge */
+            margin-bottom: 20px;
         }
 
         #date {
-            font-size: 1em; /* Tarih font küçüklüğü */
+            font-size: 0.8em; /* Tarih font küçüklüğü */
             letter-spacing: 1px;
-            margin-top: 10px;
             position: absolute;
             bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
+            right: 10px; /* Köşeye yerleştir */
+            text-shadow: 0 0 5px #8E44AD; /* Neon efekti için mor gölge */
         }
     </style>
 </head>
