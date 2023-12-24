@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="refresh" content="2;url=https://eminxyp.com.tr"> <!-- 2 saniye sonra belirtilen linke yönlendirme -->
     <title>Yönlendiriliyor...</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"> <!-- Share Tech Mono fontunu ekleyin -->
     <style>
         body {
             background: url('https://media.discordapp.net/attachments/1117547459355361301/1188231301426315414/Leonardo_Diffusion_XL_PromptCreate_a_captivating_nighttime_lan_1.jpg?ex=6599c5a2&is=658750a2&hm=1af354e9ca849d685638aabc&=&format=webp&width=1072&height=804') no-repeat center center fixed; /* Arka plan resmi ekleme, 'your-image-url' kısmını kendi resminizin URL'si ile değiştirin */
             background-size: cover; /* Arka plan resminin boyutunu kapsamak için */
             color: #7F7FFF; /* Neon renk uyumu */
-            font-family: 'Arial', sans-serif;
+            font-family: 'Share Tech Mono', monospace;
             text-align: center;
             margin: 0; /* Sayfa kenar boşluklarını kaldırın */
             height: 100vh; /* Sayfanın yüksekliğini ekran yüksekliğine ayarlayın */
@@ -18,13 +19,33 @@
             justify-content: center;
         }
 
+        #messageContainer {
+            background-color: rgba(0.2, 0.4, 0.6, 0.8); /* Çerçeve arka plan rengi ve opaklık */
+            border-radius: 20px; /* Köşeleri yuvarla */
+            padding: 20px; /* Çerçeve iç boşluğu */
+            opacity: 0; /* Başlangıçta metni gizle */
+            animation: fadeIn 1.5s ease-in-out forwards; /* Animasyon tanımı */
+        }
+
         #message {
-            font-size: 2em;
-            text-shadow: 0 0 10px #7F7FFF; /* Neon efekti için mor gölge */
+            font-size: 3em; /* Metin boyutunu arttır */
+            font-weight: bold; /* Metni kalın yap */
+            text-shadow: 0 0 15px #7F7FFF; /* Neon efekti için mor gölge */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
-    <div id="message">Yönlendiriliyor...</div>
+    <div id="messageContainer">
+        <div id="message">Yönlendiriliyor...</div>
+    </div>
 </body>
 </html>
